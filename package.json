@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "clean": "rm -rf dist",
+    "cp-fonts": "mkdir -p dist/fonts/roboto && cp -r node_modules/@fontsource/roboto/400.css node_modules/@fontsource/roboto/700.css node_modules/@fontsource/roboto/files dist/fonts/roboto",
+    "cp-static": "mkdir -p dist && cp -r static/* dist",
+    "build": "npm run clean && npm run cp-fonts && npm run cp-static",
+    "serve": "python3 -m http.server --directory dist"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.8"
+  }
+}
